@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\SwipeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +24,5 @@ Route::controller(UserController::class)->middleware(['auth'])
     // スワイプページ
     Route::get('/users', 'index')->name('users.index');
 });
+
+Route::post('/swipes', [SwipeController::class, 'store'])->middleware('auth')->name('swipes.store');

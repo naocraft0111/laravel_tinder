@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\SwipeController;
+use App\Http\Controllers\MatchController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,4 +26,8 @@ Route::controller(UserController::class)->middleware(['auth'])
     Route::get('/users', 'index')->name('users.index');
 });
 
+// マッチング機能保存
 Route::post('/swipes', [SwipeController::class, 'store'])->middleware('auth')->name('swipes.store');
+
+// マッチングしたユーザーを表示する画面
+Route::get('/matches', [MatchController::class, 'index'])->middleware('auth')->name('matches.index');

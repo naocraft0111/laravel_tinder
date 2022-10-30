@@ -19,7 +19,7 @@
 
                             <input type="hidden" name="to_user_id" value="{{ $user->id }}">
                             <input type="hidden" name="is_like" value="0">
-                            
+
                             <button class="tno"
                                 type="submit">
                                 <i class="fa fa-times"

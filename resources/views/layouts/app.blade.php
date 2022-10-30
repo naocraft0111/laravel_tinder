@@ -71,7 +71,7 @@
                                     @endif
                                 @else
                                     <li class="nav-item">
-                                        <a class="nav-link" href="">
+                                        <a class="nav-link" href="{{ route('matches.index') }}">
                                             <i class="fa fa-comments" aria-hidden="true"></i>
                                         </a>
                                     </li>
@@ -90,6 +90,7 @@
 
             <div class="tbgwrap">
                 @yield('content')
+
             </div>
         </div>
     </div>

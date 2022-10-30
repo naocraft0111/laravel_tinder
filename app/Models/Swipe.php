@@ -14,4 +14,9 @@ class Swipe extends Model
         'to_user_id',
         'is_like',
     ];
+
+    public function toUser()
+    {
+        return $this->belongsTo(User::class, 'to_user_id', 'id');
+    }
 }
